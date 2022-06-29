@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPropsContext } from 'next'
+import Link from 'next/link'
 import React from 'react'
 
 type getStaticProps = {
@@ -10,7 +11,7 @@ const ProductPage = ({products}: getStaticProps) => {
   return (
     <div>
       {products.map(item =>(
-        <div key={item.id} >{item.name}</div>
+        <div key={item.id} ><Link href={`/products/${item.id}`} >{item.name}</Link></div>
       ))}
     </div>
   )
