@@ -17,15 +17,21 @@ export const getStaticPaths:GetStaticPaths = async ()=>{
   })
   return {
     paths,
-    fallback:false
+    fallback:"blocking"
   }
 }
 export const getStaticProps:GetStaticProps<getStaticProps>  = async (context : GetStaticPropsContext) =>{
-  const data = await(await fetch(`http://localhost:3001/products/${context.params.id}`)).json()
+  const data = await ( await fetch(`http://localhost:3001/products/${context.params?.id}`)).json()
+  if(!data){
+    return {
+      notFound: true
+    }
+  }
   return {
     props:{
       product:data
-    }
+    },
+
   }
 }
 export default ProductDetail
