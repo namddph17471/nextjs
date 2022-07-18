@@ -23,9 +23,9 @@
   ],
   "users": [
     {
-      "email": "user1@gmail.com",
-      "password": "123456",
-      "id": 1
+      "email": "admin@gmail.com",
+      "password": "$2a$10$810SzqVzq84fUTuhU3KL4.ZL0reGRgALfmjAP0x3mmxmtD0ynmIXq",
+      "id": 2
     }
   ]
 }
