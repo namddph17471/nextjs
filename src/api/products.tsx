@@ -6,3 +6,6 @@ export const add = (product:any) => {
 export const removeItem = (id:any) => {
     return instance.delete(`/products/${id}`);
 }
+export const detailItem = (id:any) => {
+    return instance.get(`/products/${id}`);
+}

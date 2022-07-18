@@ -23,8 +23,8 @@ const Home = () => {
       
       {products.map((product:any,index:any) => (
       <div key={index}>
-        <p>{product.name}</p>
-        <button onClick={()=> remove(product.id)}>Delete</button>
+        {product.name}
+        <button onClick={()=> remove(product.id)} className='bg-red-500'>Delete</button>
       </div>
       ))}
         <button onClick={() => create({ id: "11", name: "Product 12" })}>Create</button>
