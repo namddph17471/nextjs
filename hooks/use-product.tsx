@@ -10,15 +10,15 @@ const useProducts = ()=> {
         const product = await add(item)
         mutate([...data,product])
     }
-    const reomve = async (id:any) =>{
+    const remove = async (id:any) =>{
         await removeItem(id)
         const newProduct = data.filter((item:any) => item.id !== id )
-        mutate([...data,newProduct])
+        mutate(newProduct)
     }
   return {
     data,
     error,
-    reomve,
+    remove,
     create
   }
 }

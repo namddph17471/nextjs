@@ -10,7 +10,7 @@ const Home = () => {
   // const { data, error, register,login } = useAuth();
   // if(error) return <div>fail to load</div>;
   // if(!data) return <div>Loading...</div>
-  const {data:products,error,create,reomve} = useProducts()
+  const {data:products,error,create,remove} = useProducts()
   if(!products) return <div>Loading ....</div>
   if(error) return <div>Error</div>
   return (
@@ -24,10 +24,10 @@ const Home = () => {
       {products.map((product:any,index:any) => (
       <div key={index}>
         <p>{product.name}</p>
-        <button onClick={()=> {reomve(product.id)}}>Delete</button>
+        <button onClick={()=> remove(product.id)}>Delete</button>
       </div>
       ))}
-        <button onClick={()=> {create({id:"12",name:"Product 9"})}}>Add</button>
+        <button onClick={() => create({ id: "11", name: "Product 12" })}>Create</button>
       <main className={styles.main}>
         Main
       </main>
