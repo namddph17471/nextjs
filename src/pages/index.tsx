@@ -24,10 +24,10 @@ const Home = () => {
       {products.map((product:any,index:any) => (
       <div key={index}>
         {product.name}
-        <button onClick={()=> remove(product.id)} className='bg-red-500'>Delete</button>
+        <button onClick={()=> remove(product.id)} className='bg-red-500 p-2 rounded m-2'>Delete</button>
       </div>
       ))}
-        <button onClick={() => create({ id: "11", name: "Product 12" })}>Create</button>
+        <button onClick={() => create({ id: "13", name: "Product 12" })}>Create</button>
       <main className={styles.main}>
         Main
       </main>

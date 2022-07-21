@@ -12,8 +12,9 @@ const ProductPage = () => {
     <div>
       {data.map((product:any,index:any) => (
         <div key={index}>
-          <Link href={`/products/${product.id}`}>
+          <Link href={`/products/${product.id}`} className="text-red-500">
             {product.name}
+            <button>edit</button>
           </Link>
         </div>
       ) )}

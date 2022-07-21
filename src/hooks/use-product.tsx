@@ -1,4 +1,4 @@
-import { add, detailItem, removeItem } from '@/../api/products'
+import { add, detailItem, removeItem } from '@/api/products'
 import React from 'react'
 import useSWR from 'swr'
 
